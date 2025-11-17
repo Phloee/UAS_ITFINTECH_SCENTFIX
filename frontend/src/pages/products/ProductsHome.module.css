@@ -1,0 +1,267 @@
+/* Layout components */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-wrapper {
+  width: 100%;
+  max-width: 1245px;
+  margin: 6.4rem auto;
+}
+
+.content-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Hero section */
+.hero-section {
+  width: 100%;
+  height: 676px;
+  background-image: url("/productsHome/img_screenshot_2025_07_22.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 3.6rem;
+  font-family: Lora, serif;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  color: #000000;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  font-family: Lora, serif;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  color: #000000;
+  margin: 10px 0 30px;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  column-gap: 2rem
+}
+
+.product-card {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.product-image-wrapper {
+  height: 30rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.product-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-image-wrapper:hover .product-image {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.product-name {
+  font-size: 19px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  color: #000000;
+  padding: 16px;
+  margin-top: 1rem;
+}
+
+/* Banner sections */
+.banner-section {
+  width: 100%;
+  margin: 6.4rem 0 64px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hair care section */
+.hair-care-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 94px 0;
+}
+
+.hair-care-content {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.hair-care-image {
+  width: 60%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.hair-care-text {
+  width: 40%;
+  padding-left: 8rem;
+}
+
+.hair-care-title {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 18px;
+}
+
+.hair-care-description {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  color: #000000;
+  padding-left: 2rem;
+}
+
+/* UV Strategy section */
+.uv-strategy-section {
+  margin-top: 2rem;
+}
+
+.uv-main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 34px;
+}
+
+.uv-products {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.uv-product-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.uv-product-row .product-image-wrapper {
+  height: 18rem;
+  width: 18rem;
+  flex-shrink: 0;
+}
+
+.uv-product-row .product-card {
+  display: flex;
+  gap: 1rem;
+}
+
+.uv-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.uv-product-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.uv-product-name {
+  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000000;
+  padding: 8px;
+  flex: 1;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin: 24px 0;
+}
+
+/* Skin Care Section */
+.skincare-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skincare-grid .product-image-wrapper {
+  height: 40rem;
+  width: 40rem;
+}
+
+/* Buttons */
+.discover-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+}
+
+.discover-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .hero-section {
+    border-radius: 5px;
+  }
+
+  .banner-image {
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1.4rem;
+    margin-bottom: 5rem;
+  }
+}
