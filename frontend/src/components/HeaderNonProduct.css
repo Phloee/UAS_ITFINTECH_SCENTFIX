@@ -1,0 +1,251 @@
+/* Header Styles */
+header {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.main-header {
+  max-width: 1245px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.logo-section {
+  height: 7rem;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-dark);
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  height: 2px;
+  width: 0;
+  background: var(--primary-blue);
+  border-radius: 50px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+.nav-link.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.nav-link.active::before {
+  width: 100%;
+  background: var(--primary-blue);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+}
+
+.language-text {
+  color: var(--text-dark);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.header-divider {
+  width: 100%;
+  height: 1.5px;
+  background-color: #d9d9d9;
+}
+
+.mobile-group {
+  display: none;
+}
+
+/* Compensation Plan Header */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.1rem 0;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  font-size: 1.7rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+.nav-item.active {
+  color: var(--primary-blue);
+}
+
+@media (max-width: 1100px) {
+
+  .main-header,
+  .sub-header {
+    display: none;
+  }
+
+  .mobile-group {
+    display: block;
+  }
+
+  .mobile-nav-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .mobile-logo-group {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .mobile-logo-pic {
+    height: 3rem;
+  }
+
+  .mobile-logo-pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .mobile-logo-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.4rem;
+    height: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-right: 2rem;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  header {
+    position: relative;
+  }
+
+  /* === MOBILE MENU WRAPPER === */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu li {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    display: block;
+    margin: 1.2rem 0;
+  }
+
+  /* === SUBMENU === */
+  .submenu {
+    overflow: hidden;
+    max-height: 0;
+    background: #f9f9f9;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  .submenu.active {
+    max-height: 137px;
+  }
+
+  .submenu li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .has-dropdown .menu-link {
+    position: relative;
+  }
+}
